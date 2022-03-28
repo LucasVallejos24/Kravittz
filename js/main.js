@@ -165,10 +165,37 @@ function addLocalStorage() {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
+let divContainer = document.getElementById('divContainer');
+
+async function mostrarFooter() {
+    let footer = await fetch('./JSON/footer.json');
+    let footerJSON = await footer.json();
+    return footerJSON
+}
+
 window.onload = function() { // Cada vez que se actualiza la pag. ejecute la function
     const storage = JSON.parse(localStorage.getItem('carrito')); // Traemos los objetos guardados en el localStorage
     if (storage) { // Si existe storage
         carrito = storage; // Guardamos los elementos traidos del LocalStorage en el array carrito
         renderCarrito()
     }
+
+    mostrarFooter().then(mostrar => {
+        divContainer.innerHTML+= `
+        <div class="row text-white">
+             <h4 class="col-4 text-reset text-uppercase d-flex align-items-center">${mostrar[0].logo}</h4>
+             <ul class="col-4 list-unstyled">
+                 <li class="font-weigth-bold text-uppercase"><h4 class="text-white">Horario y contacto</h4></li>
+                 <li class="text-reset">${mostrar[1].horario1}</li>
+                 <li class="text-reset">${mostrar[1].horario2}</li>
+                 <li class="text-reset">${mostrar[2].contacto}</li>
+             </ul>
+             <ul class="col-4 list-unstyled fs-1">
+                <li class="font-weigth-bold text-uppercase"><h4 class="text-white">Redes</h4></li>
+                <li>${mostrar[3].instagram}</li>
+                <li>${mostrar[3].whatsapp}</li>
+             </ul>
+         </div>
+        `
+    })
 }
