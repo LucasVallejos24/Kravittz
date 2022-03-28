@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Nunito Sans', sans-serif; */
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+
+body{
+    display: flex;
+    flex-direction:column;
+    background-color: #ebeae4;
+}
+
+.main__index{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.imgHeroe__container .imgHeroe{
+   width: 100%;
+}
+
+.productoDestacado__title{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.productosDestacado__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.productoDestacado__card img{
+    object-fit: contain;
+    grid-area: imgCards;
+}
+
+.productosDestacado__cards div{
+    grid-area: infoCards;
+}
+
+
+/* CARRITO  */
+
+.table__productos{
+    display: flex;
+}
+
+.table__productos > img{
+    width: 4rem;
+    object-fit: container;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.table__cantidad >input{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}

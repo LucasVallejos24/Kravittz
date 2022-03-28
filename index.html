@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<!-- BOOTS WATCH -->
+	<link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+	<!--BOXICONS -->
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>	
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="estilos.css">
+	<!-- TOASTIFY JS -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <title>Kravittz</title>	
+  </head>
+
+  <body>
+    
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container-fluid">
+			  <a class="navbar-brand fs-2 mx-2" href="#">Kravittz</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+		  
+			  <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
+				<ul class="navbar-nav ">
+				  <li class="nav-item ">
+					  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class='bx bxs-cart fs-1'></i>
+					  </button>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+	</header>
+
+	<main class="main__index">
+
+		<div class="modal fade carrito" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl">
+			  	<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div>
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Productos</th>
+									<th scope="col">Precio</th>
+									<th scope="col">Cantidad</th>
+									</tr>
+							</thead>
+							<tbody class="tbody">
+								
+
+							</tbody>
+						</table>
+						<br><br>
+						<div class="row mx-4">
+							<div class="col">
+								<h3 class="producto__total" id="precioTotal">Total: 0</h3>
+							</div>
+							<div class="col d-flex justify-content-star">
+								<button class="btn btn-success">Comprar</button>
+							</div>
+						</div>
+					</div>	
+			 	</div>
+			</div>
+		</div>
+
+		<div class="imgHeroe__container">
+			<img class="imgHeroe" src="img/img-heroe-remastered.jpg" alt="img-heroe-principal">				
+		</div>
+
+		<h2 class="productoDestacado__title">Productos destacados</h2>
+		
+
+		<section class="productosDestacado__container">
+
+			<div class="card productoDestacado__card " style="width: 14rem;">
+				<img src="img/chomba-cards.jpg" class="card-img-top " alt="chomba-azul">
+				<div class="card-body">
+				  <h3 class="card-title">Chomba azul</h3>
+				  <p class="card-text"><span class="precio">Precio: $1000</span></p>
+				  <button class="btn btn-primary boton">Agregar al carrito</button>
+				</div>
+			</div>
+			<div class="card productoDestacado__card" style="width: 14rem;">
+				<img src="img/camisa-cards.jpg" class="card-img-top" alt="camisa-celeste">
+				<div class="card-body">
+				  <h3 class="card-title">Camisa celeste</h3>
+				  <p class="card-text"><span class="precio">Precio: $500</span></p>
+				  <button class="btn btn-primary boton">Agregar al carrito</button>
+				</div>
+			</div>
+			<div class="card productoDestacado__card" style="width: 14rem;">
+				<img src="img/saco-cards.jpg" class="card-img-top" alt="saco-negro">
+				<div class="card-body">
+				  <h3 class="card-title">Saco <br>negro</h3>
+				  <p class="card-text"><span class="precio">Precio: $2500</span></p>
+				  <button class="btn btn-primary boton">Agregar al carrito</button>
+				</div>
+			</div>
+			<div class="card productoDestacado__card" style="width: 14rem;">
+				<img src="img/pantalon-cards.jpg" class="card-img-top" alt="pantalon-gris">
+				<div class="card-body">
+				  <h3 class="card-title">Pantalon gris</h3>
+				  <p class="card-text"><span class="precio">Precio: $1500</span></p>
+				  <button class="btn btn-primary boton">Agregar al carrito</button>
+				</div>
+			</div>
+			<div class="card productoDestacado__card" style="width: 14rem;">
+				<img src="img/zapatos-cards.jpg" class="card-img-top" salt="zapatos-negros">
+				<div class="card-body">
+				  <h3 class="card-title">Zapatos negros</h3>
+				  <p class="card-text"><span class="precio">Precio: $2000</span></p>
+				  <button class="btn btn-primary boton">Agregar al carrito</button>
+				</div>
+			</div>
+		</section>
+		
+	</main>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<!-- TOASTIFY JS -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+	<script src="js/main.js"></script>
+  </body>
+</html>
+
